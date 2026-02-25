@@ -9,8 +9,10 @@ class BookViewSet(ModelViewSet):
     serializer_class = BookSerializer
 
 def list(self, request, *args, **kwargs):
-    response = super().list(request, *args, **kwargs)
-    return Response({
-        "message": "List of books retrieved successfully",
-        "data": response.data
-    })
+   response = super().list(request, *args, **kwargs)
+   return Response({
+       "message": "List of books retrieved successfully",
+       "data": response.data
+    }
+    
+    )

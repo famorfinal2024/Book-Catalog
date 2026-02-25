@@ -5,10 +5,9 @@ import datetime
 class BookSerializer(serializers.ModelSerializer):
 
     # Validation for year
-    def validate_year(self, value):
-        current_year = datetime.datetime.now().year
-        if value > current_year:
-            raise serializers.ValidationError("Year cannot be in the future.")
+    def validate_published_date(self, value):
+        if value > datetime.date.today():
+            raise serializers.ValidationError("Published date cannot be in the future.")
         return value
 
     class Meta:

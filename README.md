@@ -6,7 +6,7 @@ It supports CRUD operations with versioned endpoints.
 
 ## Features
 - Versioned REST API (/api/v1/books/)
-- Validation rule (price cannot be negative)
+- Validation rule (Published date cannot be in the future)
 - Swagger API documentation
 - Automated testing
 - Git version control

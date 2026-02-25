@@ -10,6 +10,7 @@ class BookAPITest(APITestCase):
 
         data = {
             "title": "The Great Gatsby",
+            "genre": "Fiction",
             "author": "F. Scott Fitzgerald",
             "published_date": "1925-04-10"
         }
